@@ -8,7 +8,7 @@ DB   - sonardb
 User/Password  - sonardbadmin/Sonar123
 
 
-Create an AWS ECS instance
+Create an AWS ECS instance (Atleast t2.small instance as sonarqube require 1 GB free memory )
 login to the machine as ec2-user
 
 Install Java and Mysql client
