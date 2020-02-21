@@ -14,9 +14,10 @@ login to the machine as ec2-user
 Install Java and Mysql client
 -----------------------------
 
-sudo yum install mysql java-1.8* -y
-
 sudo su -
+sudo yum install mysql java-1.8* -y   //Community Edition
+sudo amazon-linux-extras install java-openjdk11 //Dev edition 
+
 
 Sonarqube Installation
 ----------------------
@@ -73,7 +74,6 @@ sonar.jdbc.username=sonardbadmin
 sonar.jdbc.password=Sonar123
 sonar.jdbc.url=<Replace the localhost with RDS DB instance name>  
 
-sonar.web.host=0.0.0.0
 sonar.web.context=/sonar
 
 
