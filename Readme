@@ -83,20 +83,37 @@ sonaradmin@..>./sonar.sh start
 sonaradmin@..>./sonar.sh status
 
 
+Configure Reverse Proxy to route the request through 80
 
 
 
+[root@ip-1...]# yum install epel-release
+[root@ip-1...]# yum install nginx
+[root@ip-1...]# sudo amazon-linux-extras install nginx1.12
 
 
 
+Update the config file to proxy the connection to port 9000 to 80.
 
 
+[root@ip-1...]# vi /etc/nginx/nginx.conf
+
+# the server directive is nginx's virtual host directive
+server {
+  # port to listen on. Can also be set to an IP:PORT
+  listen 80;
+ 
+  # sets the domain[s] that this vhost server requests for
+  server_name www.somecompany.com;   //Only if domain exists.
+ 
+  location / {
+    proxy_pass http://sonarhost:sonarport;
+  }
+}
 
 
-
-
-
-
+[root@ip-linux-x86-64]# systemctl start nginx
+[root@ip-linux-x86-64]# systemctl enable nginx
 
 
 
