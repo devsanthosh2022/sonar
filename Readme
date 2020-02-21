@@ -73,7 +73,7 @@ sonar.jdbc.username=sonardbadmin
 sonar.jdbc.password=Sonar123
 sonar.jdbc.url=<Replace the localhost with RDS DB instance name>  
 
-sonar.web.hot=0.0.0.0
+sonar.web.host=0.0.0.0
 sonar.web.context=/sonar
 
 
