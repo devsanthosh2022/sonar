@@ -1,0 +1,24 @@
+# Integrate Sonarqube with Jenkins
+
+
+# Connect to Jenkins dashboard
+
+Manage Jenkins -> Manage Plugins -> Search for 'SonarQube Scanner' plugin and install without restart.
+
+
+# Configure SonarScanner to run with Jenkins
+Manage Jenkins -> Global Tools configuration -> SonarQube Scanner
+
+
+
+
+
+
+
+
+
+
+
+
+
+
