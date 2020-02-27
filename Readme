@@ -83,6 +83,12 @@ sonaradmin@..>./sonar.sh start
 sonaradmin@..>./sonar.sh status
 
 
+Register SonarQube at boot time (RedHat, CentOS, 64 bit):
+sudo ln -s $SONAR_HOME/bin/linux-x86-64/sonar.sh /usr/bin/sonar
+sudo chmod 755 /etc/init.d/sonar
+sudo chkconfig --add sonar
+
+
 Configure Reverse Proxy to route the request through 80
 
 
